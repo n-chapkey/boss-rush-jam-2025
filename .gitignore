@@ -15,6 +15,10 @@ data_*/
 mono_crash.*.json
 
 #Custom ignores
-.png/
-.jpeg/
+*.png
+*.jpeg
+*.mp3
+*.mp3.import
+*.svg
 assets/
+Assets/
