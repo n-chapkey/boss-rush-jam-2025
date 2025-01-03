@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump_player") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		anim.play("jump")
 
@@ -35,6 +35,10 @@ func _physics_process(delta: float) -> void:
 		
 	elif direction == 1:
 		anim.flip_h = false
-
+		
+	if Input.is_action_pressed("sit") and is_on_floor():
+			anim.play("crouch")
+		
+	
 	move_and_slide()
 	

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://br28e8dxnxm43"]
 
-[ext_resource type="Texture2D" uid="uid://c0wxytkhp8xu4" path="res://Assets/Environments/Day-Platformer/PNG/tileset.png" id="1_cc01c"]
+[ext_resource type="Texture2D" uid="uid://c0wxytkhp8xu4" path="res://main/assets/Environments/Day-Platformer/PNG/tileset.png" id="1_cc01c"]
 [ext_resource type="PackedScene" uid="uid://ddyjgtl8sqhkk" path="res://scene's/player.tscn" id="2_rc0x6"]
 [ext_resource type="Script" path="res://scene's/camera_2d.gd" id="3_uuvkc"]
 
