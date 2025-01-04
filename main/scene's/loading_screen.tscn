@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfru7ry6whf46"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_esbam"]
+bg_color = Color(0.0286662, 0.304415, 0.500312, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="loading_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 459.0
+offset_top = 269.0
+offset_right = 740.0
+offset_bottom = 348.0
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "						Loading!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_esbam")
+value = 50.0

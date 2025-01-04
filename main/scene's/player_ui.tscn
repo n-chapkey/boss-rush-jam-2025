@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://h1oxdskprv65"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inl4g"]
+bg_color = Color(0.988451, 0, 0.0936742, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819192, 0.552908, 0.350561, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="player_ui" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 8.0
+offset_right = 227.0
+offset_bottom = 31.0
+
+[node name="healthbar_player" type="ProgressBar" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/fill = SubResource("StyleBoxFlat_inl4g")
+value = 42.16
+show_percentage = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
