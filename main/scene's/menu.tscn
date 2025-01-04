@@ -102,6 +102,9 @@ offset_bottom = 77.0
 theme_override_font_sizes/font_size = 50
 text = "×"
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-24, 25)
+
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="settings" to="Panel" method="_on_settings_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
