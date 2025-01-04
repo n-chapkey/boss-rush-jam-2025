@@ -45,3 +45,8 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 	
+
+
+func _on_area_2d_3_body_entered(body: CharacterBody2D) -> void:
+	position.x = 2589
+	position.y = 706
