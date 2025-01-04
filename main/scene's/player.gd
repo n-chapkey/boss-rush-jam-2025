@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var sit = false
+
 var dir:String = "none"
 var is_moving:bool = false
 @onready var anim = $AnimatedSprite2D
@@ -37,8 +37,10 @@ func _physics_process(delta: float) -> void:
 		anim.flip_h = false
 		
 	if Input.is_action_pressed("sit") and is_on_floor():
-			anim.play("crouch")
+		anim.play("crouch")
 		
+	
+	
 	
 	move_and_slide()
 	
