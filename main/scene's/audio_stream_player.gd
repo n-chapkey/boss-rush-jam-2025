@@ -18,3 +18,4 @@ func _on_check_button_pressed() -> void:
 	else:
 		stream_paused = false
 		stop = true
+

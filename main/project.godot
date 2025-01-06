@@ -15,6 +15,10 @@ run/main_scene="res://scene's/menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[dotnet]
+
+project/assembly_name="boss jam 2025"
+
 [input]
 
 left={

@@ -1,12 +1,13 @@
-[gd_scene load_steps=26 format=3 uid="uid://br28e8dxnxm43"]
+[gd_scene load_steps=27 format=3 uid="uid://br28e8dxnxm43"]
 
-[ext_resource type="Texture2D" uid="uid://c0wxytkhp8xu4" path="res://assets/main/assets/Environments/Day-Platformer/PNG/tileset.png" id="1_cc01c"]
+[ext_resource type="Texture2D" uid="uid://c0wxytkhp8xu4" path="res://assets/Environments/Day-Platformer/PNG/tileset.png" id="1_cc01c"]
 [ext_resource type="PackedScene" uid="uid://ddyjgtl8sqhkk" path="res://scene's/player.tscn" id="2_rc0x6"]
 [ext_resource type="Script" path="res://scene's/camera_2d.gd" id="3_uuvkc"]
 [ext_resource type="PackedScene" uid="uid://3tqpv6p4xr8i" path="res://scene's/pause.tscn" id="4_kd1pg"]
-[ext_resource type="Texture2D" uid="uid://cqe1fbjugbgm7" path="res://assets/main/assets/Characters/Ogre/Spritesheets/ogre-idle.png" id="5_r64vn"]
+[ext_resource type="Texture2D" uid="uid://cqe1fbjugbgm7" path="res://assets/Characters/Ogre/Spritesheets/ogre-idle.png" id="5_r64vn"]
 [ext_resource type="Script" path="res://scene's/animated_sprite_2d.gd" id="6_0voud"]
-[ext_resource type="Texture2D" uid="uid://cr1hww7bvcek7" path="res://assets/main/assets/Characters/Ogre/Spritesheets/ogre-walk.png" id="6_2b8bs"]
+[ext_resource type="Texture2D" uid="uid://cr1hww7bvcek7" path="res://assets/Characters/Ogre/Spritesheets/ogre-walk.png" id="6_2b8bs"]
+[ext_resource type="Script" path="res://scene's/player_spinner.gd" id="8_n827f"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fom2l"]
 
@@ -330,6 +331,11 @@ animation = &"idle"
 frame_progress = 0.791115
 speed_scale = 0.8
 script = ExtResource("6_0voud")
+
+[node name="PlayerSpinner" type="Node2D" parent="."]
+position = Vector2(1190.15, 161.015)
+scale = Vector2(0.51, 0.51)
+script = ExtResource("8_n827f")
 
 [connection signal="body_entered" from="Area2D" to="Camera2D2" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="Camera2D2" method="_on_area_2d_2_body_entered"]
