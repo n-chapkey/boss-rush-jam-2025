@@ -1,13 +1,14 @@
-[gd_scene load_steps=24 format=3 uid="uid://djsipe0mf8yjv"]
+[gd_scene load_steps=25 format=3 uid="uid://djsipe0mf8yjv"]
 
-[ext_resource type="Texture2D" uid="uid://ddnj35bnvx4su" path="res://assets/Characters/Ogre/Spritesheets/ogre-attack.png" id="1_mpcjy"]
+[ext_resource type="Texture2D" uid="uid://ddnj35bnvx4su" path="res://main/assets/Characters/Ogre/Spritesheets/ogre-attack.png" id="1_mpcjy"]
 [ext_resource type="Script" path="res://ogre_boss.gd" id="1_qrybp"]
-[ext_resource type="Texture2D" uid="uid://cqe1fbjugbgm7" path="res://assets/Characters/Ogre/Spritesheets/ogre-idle.png" id="2_cwtwt"]
-[ext_resource type="Texture2D" uid="uid://cr1hww7bvcek7" path="res://assets/Characters/Ogre/Spritesheets/ogre-walk.png" id="3_ahme4"]
+[ext_resource type="Texture2D" uid="uid://cqe1fbjugbgm7" path="res://main/assets/Characters/Ogre/Spritesheets/ogre-idle.png" id="2_cwtwt"]
+[ext_resource type="Texture2D" uid="uid://cr1hww7bvcek7" path="res://main/assets/Characters/Ogre/Spritesheets/ogre-walk.png" id="3_ahme4"]
+[ext_resource type="Script" path="res://boss_state_machine.gd" id="5_rmdaj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_olhmw"]
 radius = 24.0
-height = 66.0
+height = 56.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jy88v"]
 atlas = ExtResource("1_mpcjy")
@@ -147,6 +148,7 @@ animations = [{
 }]
 
 [node name="Ogre_Boss" type="CharacterBody2D"]
+texture_filter = 3
 script = ExtResource("1_qrybp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -156,3 +158,10 @@ shape = SubResource("CapsuleShape2D_olhmw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_oy3s4")
 animation = &"Boss_Idle"
+
+[node name="boss_state_machine" type="Node2D" parent="."]
+script = ExtResource("5_rmdaj")
+
+[node name="IdleState" type="Node2D" parent="boss_state_machine"]
+
+[node name="AttackState" type="Node2D" parent="boss_state_machine"]

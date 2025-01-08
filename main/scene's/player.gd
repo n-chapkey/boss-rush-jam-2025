@@ -43,8 +43,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		anim.play("crouch")
 	
-	elif Input.is_action_pressed("player_attack"):
+	if Input.is_action_pressed("player_attack"):
+		velocity.y = 1
 		anim.play("attack")
+		await get_tree().create_timer(1).timeout
+		velocity.x = 0
 		
 		
 	

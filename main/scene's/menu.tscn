@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://do7kvlfpl456c"]
 
 [ext_resource type="Script" path="res://scene's/menu.gd" id="1_03qwg"]
-[ext_resource type="AudioStream" uid="uid://ca4q7s0vk4w7i" path="res://main/rise-above-20240527-200106.mp3" id="2_jvo4u"]
+[ext_resource type="AudioStream" uid="uid://ca4q7s0vk4w7i" path="res://main/rise-above-20240527-200106.mp3" id="2_2qqnm"]
 [ext_resource type="Script" path="res://scene's/panel.gd" id="3_3nw1p"]
 [ext_resource type="Script" path="res://scene's/audio_stream_player.gd" id="3_frfem"]
 
@@ -61,7 +61,7 @@ theme_override_font_sizes/font_size = 40
 text = "Quit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_jvo4u")
+stream = ExtResource("2_2qqnm")
 volume_db = 1.0
 autoplay = true
 script = ExtResource("3_frfem")
